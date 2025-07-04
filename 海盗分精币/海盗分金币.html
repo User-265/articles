@@ -1,0 +1,478 @@
+<!DOCTYPE html><html><head>
+      <title>海盗分金币</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\s1381\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.18\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<div class="bg">
+<div class="hide">
+<h1 id="parameters">parameters </h1>
+<style>
+html {
+  font-size: 20px;
+}
+.bg {
+  background-color: #3559a2;
+}
+.content {
+  padding: 1rem;
+  overflow: auto;
+}
+/* 重置所有内部元素的默认外边距 */
+.content > *:first-child {
+  margin-top: 0 !important;
+}
+.content > *:last-child {
+  margin-bottom: 0 !important;
+}
+.hide {
+    display: none;
+}
+h2 {
+    color: #deeaf0 !important;
+    font-size: 1rem !important;
+}
+img {
+    width: 1.5rem;
+    vertical-align: middle;
+}
+.me {
+    color: #99e7fe;
+}
+.alley {
+    color: #aaf0aa;
+}
+p {
+    font-size: 1rem !important;
+    line-height: 2;
+    color: #deeaf0;
+}
+strong {
+    color: #deeaf0 !important;
+}
+th {
+  color: #deeaf0 !important;
+}
+table {
+  color: #deeaf0 !important;
+}
+blockquote {
+  background: #f3db77 !important;
+  border-left-color: #c49f08 !important;
+}
+
+blockquote p {
+  color: #c49f08 !important;
+}
+@media print {
+    img {
+      display: inline !important;
+      vertical-align: middle !important;
+      max-width: 1.5rem !important;
+    }
+  }
+</style>
+<h2 id="avatars">avatars </h2>
+<h1 id="main">main </h1>
+</div><div class="content">
+<h2 id="1-平静的休假">1 平静的休假？ </h2>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（……海盗，任何时候都要剿，不剿不行，你们想想，你带着老婆，出了港，吹着海风还唱着歌，突然就被麻匪啊不是，被海盗，给劫了！）</p>
+<p>大约15分钟前<br>
+连日的阴雨沉沉终于迎来了了结，难得有个好天气。我正在冈依沙瓦号座舰的甲板上，和这艘船的主人共享时光。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：大忙人哟，终于有空陪我出海了啊。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：只是趁着天气不好提前处理了一些工作而已，腾出这两天工夫又要回去了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：欸，别总是这样嘛。指挥官，我来给你一个更多休假的祈福！</p>
+<p>冈依沙瓦退后几步，开始了祈福的舞蹈。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：♪~风啊，愿您降下福祉，长久庇佑吾辈♪~愿更多假期~随风而来~♪<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（……女神还管这个的么，而且这祷词也太不正经了吧 <s>，感觉不如《密码的周一能不能放过我这一回》</s> 。）</p>
+<p>伴随着少女不着调的小曲，金色的光芒在她脚下涌现，顺着甲板木的接缝流淌，最后虹吸到桅杆上，化作一道冲天的信标。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：居然真的有用吗……<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：呵呵~只要请求合理，女神会回应她的信徒的每次祈祷。</p>
+<p>海浪和着少女的舞步拍打，随着舞步渐停，风浪也渐渐停息，仿佛它们也受到了女神的庇护，获得了休假。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：好安静啊，海面上也没有别的人。</p>
+<p>没有了海风的吹拂，一时间竟有些沉闷，周围安静到耳朵里嗡嗡作响。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：……<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：是不是有些太安静了？</p>
+<p>天边不知何时出现一团黑云，霎时间就聚拢着压迫过来，将冈依沙瓦号座舰笼罩起来。海水翻涌起来，摇晃着这艘巨轮。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：不好，是风暴！</p>
+<p>风暴中，几位少女的身影从天而降，平稳地落在摇晃的甲板上。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：错啦，是飓风船团！<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：怎么，是你！你怎么来了！</p>
+<p>船身突然剧烈颠簸，我被向后抛去，落在一团触手之中，随即被捆住了手脚，眼口也被捂住了。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：抓住指挥官了！飓风船团，收工！<br>
+<br></p>
+<h2 id="2-囚犯舱内">2 “囚犯”舱内 </h2>
+<p>“伟大的皇家财富号”，某个船舱内</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（……海盗，任何时候都要剿，不剿不行，你们想想，你带着老婆，出了港，吹着海风还唱着歌，突然就被麻匪啊不是，被海盗，给劫了！）</p>
+<p>我被捆在角落的一把沉重椅子上，不过至少她们没把嘴和眼睛也蒙上。在离我最远的另一个角落，冈依沙瓦以同样的姿态被捆在另一把椅子上。<br>
+在房间中间，一团巨大的触手生物蜷缩着。显然这个房间对它来说太狭窄了。它的一根触手正指向我，和我面面相觑。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：你好。<br>
+<img src="avatars/%E9%98%BF%E5%B0%94%E6%88%88.png" alt="阿尔戈"><font class="alley"> 阿尔戈</font>：……</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：那么情况很显然了——我们被飓风船团绑架了。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：不是我们，而是我。</p>
+<p>在场的任何人都知道她们想干嘛，除了阿尔戈——甚至包括阿尔戈。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：那确实。所以你有什么办法吗？</p>
+<p>……<br>
+观察周围<br>
+这间船舱虽然比较狭小，但还算干净。从四处堆积的帆布、绳索来看，应该是间杂物室。舱室的门被阿尔戈把守着，门对面的墙上有一扇舷窗，看起来能从其中钻出去。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：嗯……这里环境比我想象的要好多了，看起来不像是专门关押俘虏的地方。她们人还怪好的嘞。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：如果有办法解开绳子的话，或许可以从这个窗户出去。</p>
+<p>我试着挣脱捆绑，但是被牢牢捆着。绳索也很粗，不像是一时半会能磨断的。而且阿尔戈的触手已经蠢蠢欲动了。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：……<br>
+<img src="avatars/%E9%98%BF%E5%B0%94%E6%88%88.png" alt="阿尔戈"><font class="alley"> 阿尔戈</font>：……</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：嘘！我好像能听到什么。</p>
+<p>她努力侧过身去，把耳朵贴在墙壁上。隐隐有声音从隔壁舱室传来。<br>
+<br></p>
+<h2 id="3-分赃大会">3 分赃大会 </h2>
+<p>会议室内</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：……所以，老规矩！按照船团法典，根据座次提出分配方案，投票过半，通过！不通过的，下次战利品分配也不准参加！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：座次，按照这次行动的功劳大小来！<br>
+首先，我，伟大的皇家财富，飓风船团的团长，排第一位！<br>
+其次，幻想给我们提供了指挥官要和冈依沙瓦单独出海的情报，排第二位。<br>
+玛丽•西莱斯特，你的阿尔戈功劳很大，排第三位！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：至于其他人吗...大家出力都差不多，就按照加入飓风船团的顺序来排！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：“大家出力都差不多”吗……？这么说恐怕不太合适吧。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：一份出卖朋友的情报，就能排第二位了吗？什么时候我们对叛徒这么宽容了！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：哈，那我们这次打劫指挥官和冈依沙瓦，不也是背叛吗？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：……这不一样！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：那个，我可不想出主意哦，谁分给我的份额合理，我就支持谁。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：按功劳排的话，玛丽小姐也没有理由排第二位吧。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：为、为什么？冈依沙瓦的船可是我掀的诶！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：那是你掀的吗，明明是阿尔戈。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：这有什么区别吗？那给阿尔戈也分一份呗？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：噗哧——那最后不还是你拿走了吗？</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：那个~本来是要靠我找到指挥官的，但是指挥官就在甲板上……好像也没帮上什么忙……但是但是，好像没什么战斗就拿下了，大家的贡献好像也确实差不多~<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：对啊，大家贡献都差不多，凭什么你皇家财富排第一个啊？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：？我可是飓风船团的团长！排第一个不是天经地义？这可是海盗的规则！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：团长就能排第一个？这规则不是欺负老实人吗？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：投票分配战利品也是规则，怎么没见你反对啊？</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：别急，这么看下来，座次的先后好像不能决定什么哦~</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：😡直接按加入船团的顺序来！大家不会有意见了吧？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：我同意。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：我好像是第四个欸~有点麻烦，加里冒险和我换一下吧~<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：我没意见。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font>：……啧。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：这不还是没什么区别。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：好了，既然大家都不反对，那就开始提方案吧。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：两天时间，一共可以榨50次。根据著名的罗伯茨船规，</p>
+<blockquote>
+<p><em>船长和航海长在分战利品时要得到2份，炮手、厨师、医生、水手长分1.5份，其他有职人员分1.25份，普通水手分1份。</em></p>
+</blockquote>
+<p>我决定，我和金鹿，8次；玛丽和幻想，6次；剩下的人每人4次；余下两次给玛丽和朴茨茅斯，作为直接抓住指挥官的奖励。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">6</td>
+</tr>
+</tbody>
+</table>
+<p>好了，投票吧！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：我只有4次也就算了，维达大人也只能分4次吗？而且幻想分6次？我不同意！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：那个，其实我还是比较满意的~不过既然加里强烈反对，那我也投反对票吧~<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：我亲爱的伟大的维达船长，投个赞成票好不好？我可以给你很多糖果和零食哦。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：唔不行不行不行！这不是糖果和零食可以衡量的啦！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：我反对。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：见好就收吧？寻宝猎人可不是每次都能满载而归的哦？</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：4次好像有点少呢~但是海豚确实没帮上什么忙~而且朴茨茅斯说的对，海上寻宝师也不是每次都能有收获的，四次不错了，我…赞同。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：哈哈！好，已经有五票通过了！幻想你不用投了，就算你反对也不会影响结果的，更何况你也不会反对，对吧？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font>：我确实反对。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：我就说吧……啊？6次还不满足吗？深海魔物的胃口这么大吗？不过你反对也没有用，已经过半同意了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：已经过半了吗？谁说我同意了？</p>
+<p>所有人都没有料到，决定性的一票竟然出自金鹿。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：你不同意？你和我一样，都是8次，是所有人中最多的了！你为什么不同意？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：你不妨想一下，你被票出局以后，作为顺位的我会怎么分配？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：我出局，那我的8次会回到奖池……你打算怎么分？给所有人都加两次？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：呵呵，too young, too simple. 我的方案，会让所有人“更加”满意的……<br>
+<br></p>
+<h2 id="4-金鹿的演算">4 金鹿的演算 </h2>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：咳嗯！我的方案：<br>
+我，45次；维达，2次；加里冒险、朴茨茅斯、和睦，1次。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：？？？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：你疯了吗？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：等下，她这是要……？</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：很聪明。和睦，如果只剩下三个人，刚好轮到你分配，你会怎么分？</p>
+<p>和睦沉默了一会，随后抬起头，像是下定了某种决心。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：我明白了，50次，全部归我自己。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：为什么啊，你明白什么了？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：你想想，如果你和幻想否决了我的提案，接下去会怎么样？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：你出局，轮到我分。我来分，那么……咦？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font>：无论你怎么分，我都可以投反对票，从而独吞全部次数。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font>：对，所以在我的回合，即使我独吞50次，你也不得不同意，至少你还能保住下次分战利品的机会。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：所以剩下三个人的时候，无论是谁，50比0比0的方案总数能通过的。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：所以，朴茨茅斯，你是倒数第四个，你来说说，在已知剩下三个人时唯一的分配方案的情况下，你要怎么提案才能通过？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：当然是多给最后两个人分配了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：“多给”是多少呢？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：……每人10次？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：1次。1次就足以改变她们的投票了。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：不要问我！~我思考不动啦！~<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：真她妈黑……呵，果然还是为了利益吗……真是摆脱不掉的命运啊……不过这么冷酷绝情的计算，倒是让我有些敬佩了。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">总人数</th>
+<th style="text-align:center">所需票数</th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/8/8a/e2w3cgxchn1q1xe19c3l4c713wpvill.jpg" alt="和睦"><font class="alley"> 和睦</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font></th>
+<th style="text-align:center"><img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">49</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">47</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">7</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">45</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：所以我的方案就是这样了，要不要投赞成票，你们自己计算吧。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：┭┮﹏┭┮呜呜……<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：┭┮﹏┭┮呜呜……不许隐身！过来给我坐着！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：可惜人不是数字。我不会按照你的算计来的。我，反对。按照你的计算，四比四，你输了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：“非理性人”吗，有趣。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：说谁不理性呢？！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：数学名词罢了，不要在意。那我倒是好奇，下一轮你又如何呢？按照计算，下一轮你本来就要反对的。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：我，有自己的筹码。</p>
+<p>加里冒险带着坚毅的目光，从每个人的脸上扫过。然后，她站了起来，动作不块，却带有一种打破凝固气息的力量。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：人，不是数字。但是人是什么？不过是被利益驱使的野兽罢了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：对，数学很美妙，逻辑很清晰。它告诉我们，只要每个人都像冰冷的齿轮一样运转，只盯着自己眼前那一丁点‘最优’，就能分完战利品，然后……各自心怀鬼胎地散伙？”<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：信任？呵，我这个被欺骗、被出卖、被背叛过的家伙，如今也谈起什么信任来了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：而我的筹码，只有信任。很荒谬吧？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：我的方案：把她们两个投掉，然后，我只要1次。剩下的49次，维达大人、朴茨茅斯小姐、和睦小姐、海豚妹妹，你们平分48次，剩余的1次就当送给指挥官的礼物了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：至于幻想？作为冈依沙瓦手下的人，却出卖她的行踪，你不配参与分配！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：下注吧，在这片海上，信任就是赌注，赌的是命！我比你们任何人都更清楚被出卖的滋味！但我今天，就她妈的要赌一把！如果我没有履行承诺，你们完全可以按照古老的规矩，把我丢进海里喂鲨鱼！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：(っ °Д °;)っ加里，你冷静一下啊！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：😰啊哈，那个，我们，我们至少都是在指挥官麾下的吧？信任，信任当然是有的！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：我希望如此。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：🖐️😭🤚那个，完全没必要把我也投掉啊！我支持加里！我的方案是把加里留给指挥官的那一份给我，其他不变！或者大家平均分配，每人7次！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：哈哈，果然，座次并不能决定什么啊！<br>
+<br></p>
+<h2 id="5-不速之客">5 不速之客 </h2>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：她们好像还没决定最后的分配方法。</p>
+<p>冈依沙瓦贴着墙壁，留心听着隔壁的动静，不时小声向我传递情报。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（这是完全没把我当人啊。）</p>
+<p>轰————！</p>
+<p>一阵炮击突然袭来，剧烈的爆炸声撼动了整艘船，紧接着是密集的炮火声和尖锐的警报。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：什么情况？是谁在偷袭？<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（塞壬袭击？还是港区发现情况了？）</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：诸位的分赃大会开得可真热闹啊。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：太好了，我们有救了！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：首先，我们这是分配战利品！其次，你什么时候到我的船上来的？！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：也没有多久，也就是在金鹿小姐开始她的演算的时候。数学不错，金鹿小姐，不愧是著名的投资家。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：可惜，你没有算到我的出现。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：你要干什么？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：当然是通知港区，把指挥官带走了。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：或者，给我一点小小的好处。我要10次。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：太好了，我没救了。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：？你也疯了？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：10次，没有商讨的余地，否则我就通知港区领人，谁也别想得到。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：(╬▔皿▔)╯成交！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：不行，我得做点什么。</p>
+<p>冈依沙瓦疯狂地摇动椅子制造响声，同时大声叫喊着，</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：喂——！放我出去！我有话要说！</p>
+<p>隔壁会议室明显安静了一下。随后，阿尔戈打开了舱门，一根触手卷着冈依沙瓦，连人带椅带了出去。哐当一声，沉重的舱门被它随手关上。</p>
+<p><img src="avatars/%E9%98%BF%E5%B0%94%E6%88%88.png" alt="阿尔戈"><font class="alley"> 阿尔戈</font>：……？</p>
+<p>随着关门的声响，它的一根触手好像意识到了什么，啪的一下甩到舱门的舷窗上，试图阻止身躯的离开。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（……它，把自己锁在外面了？）</p>
+<p>触手徒劳地用吸盘吸住玻璃，却被身躯一个个地分离。待到最后一个吸盘无能为力地放弃挣扎，整根触手一下子回弹，啪地打在阿尔戈的身躯上。</p>
+<p>会议室内</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：什么事这么吵吵嚷嚷的？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：放开我，我要加入你们的分赃！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：今天是见鬼了吗，怎么一个个都不按套路出牌啊！你，加入战利品分配？凭什么啊？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：凭我可以让指挥官的假期多延长一天！这一天可以多榨10次。拿这一天作筹码，我要求平等加入分配。</p>
+<p>此言一出，全场皆惊，只有少数人很快反应过来。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font>：同意。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：我同意，只要把许诺给我的10次给我。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：我算算……多了一个人，但是多了10次，但是这10次有人全要了，就是没有变化，我同意。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：……停火了吗？那我现身了哦。同意。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：大家都同意是吧？那我开始分了！</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：咳！<br>
+首先，10次给圣马丁，所以剩下来还是10个人分50次。<br>
+其次，不要再搞什么破数学了！就按咱海盗朴实的理论来，每个人自己说要多少！我要5次好了。玛丽，你要多少？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/e/ec/1m5fr5eqaf4edvml1120uuugmfg9ou8.jpg" alt="玛丽"><font class="alley"> 玛丽·西莱斯特</font>：啊！我我我平均值，5次！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：好！加里，你要多少？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/b/bc/ns8wd9a39s0nazoxo3e6zqxgzl2zaxy.jpg" alt="加里冒险"><font class="alley"> 加里冒险</font>：5次。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：维达。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：……维达？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：Zzzz……<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：……算了，看大家给你留多少吧。下一个，朴茨茅斯！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/a/ab/53t8x0lngp4a4yx4i3935cp3rymt91a.jpg" alt="朴茨茅斯"><font class="alley"> 朴茨茅斯</font>：哎，我觉得要不干脆大家都每人五次算了！反正我也要5次。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：我也是这么想的。剩下的，投票表决一下？</p>
+<p>一票反对，三票支持。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：还剩6个人要分，谁还没投票？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/8/8e/i6v2rvwzzdw2dizhema4e83ne53pv9u.jpg" alt="维达"><font class="alley"> 维达</font>：Zzzz……<br>
+<img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：唉算了，你是说4次也够了是吧，当你赞成好了。那海豚呢，你之前4次是赞同的，那现在呢？海豚？</p>
+<p>原本海豚号的座位上，现在空无一人，只剩下她的帽子戴在椅背上，遮掩她早已离开的事实。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：什么时候走的……不好！<br>
+<br></p>
+<h2 id="6-远走高飞">6 远走高飞 </h2>
+<p>阿尔戈将冈依沙瓦带走，并把自己锁在门外之后</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：它应该没有聪明到会去要钥匙。即便它会，钥匙对它来说也太小了。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：下次再有人进来，恐怕就是瓜分完毕，开始动手了吧。不过这应该还有很久，还是趁机考虑怎么逃脱吧。</p>
+<p>没有了阿尔戈的阻挡，我得以再次审视这间船舱。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：对面的墙壁后面就是会议室了，我必须尽量不弄出很大的动静。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：阿尔戈需要离开才能把冈依沙瓦送到会议室，而会议室又在这小船舱隔壁，说明这会议室还挺大。这么大的会议室，会在哪里？</p>
+<p>我努力回想这艘船的舱室布局，结果一无所获。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：还是放弃走门吧，我也不清楚通道布局。<br>
+<img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：唯一的选择只有窗户了。这艘船不是很高，从窗户跳海没有问题。</p>
+<p>眼下唯一的问题就是，我还被绳子捆在这把沉重的椅子上。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：只要把绳子弄开，就可以逃脱了。</p>
+<p>就在我自言自语，同时试图挣脱绳索的时候，一双冰凉的小手突然从我背后搂过来，一只手捂住我的嘴，另一只手上拿着什么冰凉的东西贴在我的侧颈。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：（！！！）<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：嘿嘿~指挥官说得对，只要把绳子解开，指挥官就能逃脱了呢~让我来帮你吧~</p>
+<p>海豚将把我牢牢捆住的绳索割开，我顿时感到浑身轻松。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：所以你是怎么……<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：嘘~现在不要问哦~</p>
+<p>海豚竖起食指贴在唇边，又靠过来，送出指头在我脸上轻点一下。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：所以刚才抵在我脖子上的就是这把刀吗？<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：啊哈~那只是觉得，刚才那个姿势就应该把刀抵过去的~绝对绝对不会伤害指挥官的哦~<br>
+<img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：总之，走窗户动静太大，跟我来！</p>
+<p>海豚掀开地上一块帆布，一个洞口出现在地板上。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/1/10/otrfujpnphx0c3dmqpwhqfdw2jemnty.jpg" alt="海豚"><font class="alley"> 海豚</font>：我在船上寻宝时发现的密道，你先下去，我在后面把出口复原。啊，还得把窗户和门打开，让大家不知道指挥官是怎么跑掉的！</p>
+<p>此刻，我只能选择相信海豚。<br>
+我们在密道中穿行着，不知怎么地就到了海水中。<br>
+就像一条真正的海豚一样，海豚号抓住我的手，把我带到了她的船上。</p>
+<br>
+<h2 id="7-尾声">7 尾声 </h2>
+<p><img src="https://patchwiki.biligame.com/images/blhx/f/fa/hht632x7ixdj45zky5you1a4hx20wqk.jpg" alt="皇家财富"><font class="alley"> 皇家财富</font>：可恶！他们是从哪里溜走的？</p>
+<p>众人赶到杂物间的时候，看到的只有空荡荡的椅子和一地绳索。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：恐怕已经走了很久，这会已经不知道在哪了。</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/6/66/8xbjbowssyyf8svf94bt4ojv4arj28i.jpg" alt="幻想"><font class="alley"> 幻想</font>：……祭司大人，您的计策恐怕失败了。<br>
+<img src="https://patchwiki.biligame.com/images/blhx/d/d9/1w64og12bc05tvi9myxz77ky9yo4ol4.jpg" alt="圣马丁"><font class="alley"> 圣马丁</font>：？！你也有密谋？！<br>
+<img src="https://patchwiki.biligame.com/images/blhx/6/69/42lpacnakmpdza7aon1u4pgrloqkbge.jpg" alt="冈依沙瓦"><font class="alley"> 冈依沙瓦</font>：……啊蛤，没有，没有哦~</p>
+<p><img src="https://patchwiki.biligame.com/images/blhx/3/3b/p5mijognf4rd58nor714d2t2wo6z1st.jpg" alt="金鹿"><font class="alley"> 金鹿</font>：呵呵，果然，到最后，起决定作用的不是座次与方案啊。</p>
+<p>海豚号的座舰上</p>
+<p>带着我回到她的座舰上后，海豚立即扬帆，以最大的速度远离事发地。</p>
+<p><img src="avatars/%E6%8C%87%E6%8C%A5%E5%AE%98.png" alt="指挥官"><font class="me"> 指挥官</font>：感谢你的出手相助，所以你为什么要……海豚？！</p>
+<p>她薄衫上仅有的一颗纽扣不知何时解落，仅剩下脖颈上一条系带维系着。随着她轻轻一拉，薄衫随即滑落，</p>
+<p><img src="avatars/%E6%B5%B7%E8%B1%9A%E6%8D%A2%E8%A3%85%E8%A1%A8%E6%83%85.png" alt="海豚换装表情"><font class="alley"> 海豚</font>：嘿嘿……她们太磨蹭啦~我听出指挥官在哪里，就自己过来了~</p>
+<p>海豚握住我的双手，触手缠绕住我的手腕，逼着我连连后退。</p>
+<p><img src="avatars/%E6%B5%B7%E8%B1%9A%E6%8D%A2%E8%A3%85%E8%A1%A8%E6%83%85.png" alt="海豚换装表情"><font class="alley"> 海豚</font>：指~挥~官~💕不要跑哦~💕<br>
+<br></p>
+<p style="text-align: center;">——海盗分精币·完——</p>
+<br>
+</div></div>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
